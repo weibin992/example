@@ -1,0 +1,24 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /springboot
+
+spring:
+  mvc:
+    pathmatch:
+      use-suffix-pattern: true
+      use-registered-suffix-pattern: true
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  datasource:
+    username: root
+    password: 12345
+    url: jdbc:mysql://localhost:3306/example?useUnicode=true&characterEncoding=utf-8&useSSL=false&autoReconnect=true
+    driver-class-name: com.mysql.jdbc.Driver
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: cn.weibin.springboot
+  configuration:
+    map-underscore-to-camel-case: true
