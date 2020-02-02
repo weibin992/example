@@ -35,7 +35,7 @@ export default {
                 this.$message.error("登录失败，请输入密码");
                 return;
             }
-            this.$http.post("/login", this.user).then(() => {
+            this.$http.post("login", this.user).then(() => {
                 this.$router.replace({ name: "Home" });
                 this.$message({
                     message: "登录成功",

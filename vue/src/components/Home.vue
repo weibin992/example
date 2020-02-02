@@ -41,7 +41,7 @@ export default {
     },
     methods: {
         logout() {
-            this.$http.get('/logout').then(() => {
+            this.$http.get('logout').then(() => {
                 this.$router.replace({ name: 'Login' });
             });
         }
